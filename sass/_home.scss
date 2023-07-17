@@ -1,0 +1,92 @@
+.section-hero {
+
+    background-color: var(--dark-10);
+    padding: 10rem 0;
+
+    background-image: url("/img/luz-verde.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+    .text {
+        h1 {
+            color: var(--dark-40);
+            font-size: 7.2rem;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        p {
+            color: var(--brand-color);
+            font-size: 2.4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+
+        }
+    }
+
+    .image {
+        display: flex;
+        justify-content: center;
+    }
+
+    @include responsive(480px) {
+        .section-hero {
+            padding: 4rem 0;
+        }
+    }
+}
+
+.section-control {
+    background-color: var(--dark-10);
+    padding: 6rem 0;
+
+    .container {
+        @include flex(row, space-around, center);
+    }
+
+    .description {
+        max-width: 60rem;
+        h2 {
+            color: var(--dark-40);
+            font-size: 6.4rem;
+            margin-bottom: 4rem;
+            text-align: center;
+            span {
+                color: var(--brand-color);
+                font-size: 6.4rem;
+            }
+        }
+
+        p {
+            color: var(--dark-30);
+            font-size: 2.4rem;
+            font-weight: 500;
+            text-align: center;
+        }
+    }
+
+    @include responsive(1200px){
+        .description{
+            max-width: 48rem;
+        }
+
+        .control{
+            max-width: 50rem;
+        }
+    }
+
+    @include responsive(768px){
+        .container{
+            flex-direction: column;
+        }
+
+        .description{
+            max-width: 80rem;
+            margin-bottom: 4rem;   
+        }
+    }
+}

@@ -1,0 +1,39 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+	list-style: none;
+	text-decoration: none;
+	font-size: 1.6rem;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	/*responsividade em imagens*/
+}
+
+html {
+	font-size: 62.5%;
+	/* 1rem = 10px , 1.6rem = 16px */
+
+	@include responsive(991px) {
+		font-size: 50%;
+	}
+
+	@include responsive(480px) {
+		font-size: 40%;
+	}
+	
+}
+
+body {
+	font-family: var(--primary-font);
+	/*fonte mais usada no site*/
+}
+
+button {
+	background-color: transparent;
+	cursor: pointer;
+}

@@ -1,0 +1,28 @@
+footer {
+    background-color: var(--dark-10);
+    padding: 6rem 0;
+    
+    .container{
+        @include flex(row, space-between, center);
+    }
+
+    .copy {
+        display: flex;
+        p {
+            color: var(--dark-20);
+            font-size: 1.8rem;
+
+            &:first-child {
+                margin-right: 5.6rem;
+            }
+        }
+    }
+
+    @include responsive(600px){
+        padding: 4rem 0;
+
+        img{
+            max-width: 11rem;
+        }
+    }
+}

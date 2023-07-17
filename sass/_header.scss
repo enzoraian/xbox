@@ -1,0 +1,105 @@
+header {
+    background-color: var(--dark-10);
+    height: 8.8rem;
+    display: flex;
+
+    .container {
+        @include flex(row, space-between, center);
+    }
+
+    .menu {
+        @include flex(row, flex-start, center);
+
+        .list {
+            @include flex(row, flex-start, center);
+            margin-right: 15.8rem;
+
+            .list-item {
+
+                &:not(:last-child) {
+                    margin-right: 4.8rem;
+                }
+
+                .link {
+                    color: var(--dark-40);
+                    font-size: 1.7rem;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .btn-primary {
+            @include style-btn(5.8rem, var(--brand-color), var(--dark-10));
+        }
+    }
+
+    @include responsive(1200px) {
+        .menu {
+            .list {
+                margin-right: 7.9rem;
+
+                .list-item {
+                    &:not(:last-child) {
+                        margin-right: 2.4rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive (991px) {
+        .logo {
+            max-width: 11rem;
+        }
+
+        .menu {
+            .btn-primary {
+                height: 5rem;
+                line-height: 5rem;
+                padding: 0 2rem;
+            }
+        }
+    }
+
+    @include responsive(768px) {
+        .menu {
+            .list {
+                margin-right: 2.4rem;
+
+                .list-item {
+                    &:not(:last-child) {
+                        margin-right: 1.6rem;
+                    }
+                }
+            }
+
+            .btn-primary {
+                height: 4rem;
+                line-height: 4rem;
+                padding: 0 2rem;
+            }
+        }
+    }
+
+    @include responsive(600px) {
+        height: 18rem;
+
+        .container {
+            @include flex(column, center, center);
+        }
+
+        .logo {
+            margin-bottom: 2rem
+        }
+
+        .menu {
+            @include flex(column, center, center);
+
+            .list {
+                margin-right: 0;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}

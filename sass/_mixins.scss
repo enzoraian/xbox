@@ -1,0 +1,33 @@
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin style-btn($height, $bg, $colorText) {
+    display: inline-block;
+    height: $height;
+    line-height: $height;
+    /*centralizar texto do botão*/
+
+    background-color: $bg;
+    color: $colorText;
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 3rem;
+
+    transition: all 0.3s;
+
+    &:hover {
+        background-color: #333;
+        color: #fff;
+    }
+}
+
+@mixin responsive ($screenWidth) {
+    @media(max-width: $screenWidth) {
+        @content;
+    }
+}
