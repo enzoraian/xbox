@@ -332,6 +332,11 @@ header .menu .btn-primary:hover {
 .section-questions .accordion.active .title .icon .arrow-down {
   display: none;
 }
+@media (max-width: 480px) {
+  .section-questions {
+    padding: 4rem 0;
+  }
+}
 
 footer {
   background-color: var(--dark-10);

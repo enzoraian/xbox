@@ -62,4 +62,8 @@
             }
         }
     }
+
+    @include responsive(480px){
+        padding: 4rem 0;
+    }
 }
