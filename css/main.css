@@ -63,6 +63,11 @@ header {
   background-color: var(--dark-10);
   height: 8.8rem;
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2023;
 }
 header .container {
   display: flex;
@@ -166,6 +171,7 @@ header .menu .btn-primary:hover {
 }
 
 .section-hero {
+  margin-top: 8.8rem;
   background-color: var(--dark-10);
   padding: 10rem 0;
   background-image: url("/img/luz-verde.png");
@@ -277,6 +283,54 @@ header .menu .btn-primary:hover {
   .section-games .game {
     max-width: 100%;
   }
+}
+
+.section-questions {
+  background-color: var(--dark-10);
+  padding: 6rem 0;
+}
+.section-questions h2 {
+  color: var(--dark-40);
+  font-size: 4.8rem;
+  margin-bottom: 4rem;
+}
+.section-questions h2 span {
+  color: var(--brand-color);
+  font-size: 4.8rem;
+}
+.section-questions .accordion {
+  margin-bottom: 4rem;
+  border-bottom: 0.1rem solid var(--dark-30);
+  padding-bottom: 3rem;
+}
+.section-questions .accordion .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-questions .accordion .title h3 {
+  color: var(--dark-40);
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.section-questions .accordion .title .icon .arrow-up {
+  display: none;
+}
+.section-questions .accordion p {
+  color: var(--dark-30);
+  max-width: 110rem;
+  display: none;
+}
+.section-questions .accordion.active p {
+  display: block;
+}
+.section-questions .accordion.active .title .icon .arrow-up {
+  display: block;
+}
+.section-questions .accordion.active .title .icon .arrow-down {
+  display: none;
 }
 
 footer {
